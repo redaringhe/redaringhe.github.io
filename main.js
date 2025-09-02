@@ -26,15 +26,15 @@ function setUserName() {
 	myHeading.textContent = `Che bel nome, ${myName}`;
 };
 
-//if (localStorage.getItem("name")!="Manto") {
-//	prompt(`Non sei la persona che cerco, ${myName}. Sai cosa dirà Giovanni Muciaccia prima di morire?`);
-//	const myNameTwo = prompt("Ragazzi è il momento di un Heart Attack. Come ti chiami?");
-//	localStorage.setItem("name", myNameTwo);
-//	myHeading.textContent = `Art Attack, ${myNameTwo}!`
-//	for (var i = 0; i < myParagraph.length; ++i) {
-//			myParagraph[i].textContent = `Tum tum tum Sahur DOVE SI NASCONDE SADDAM HUSSEIN? NELLO SCANTINATO DI Giovanni Muciaccia o nel tuo, ${myName}? Non puoi fuggire. Tutturuuuuuuuuuu`
-//	}
-//}
+if (localStorage.getItem("name")!="Manto") {
+	prompt(`Non sei la persona che cerco, ${myName}. Sai cosa dirà Giovanni Muciaccia prima di morire?`);
+	const myNameTwo = prompt("Ragazzi è il momento di un Heart Attack. Come ti chiami?");
+	localStorage.setItem("name", myNameTwo);
+	myHeading.textContent = `Art Attack, ${myNameTwo}!`
+	for (var i = 0; i < myParagraph.length; ++i) {
+			myParagraph[i].textContent = `Tum tum tum Sahur DOVE SI NASCONDE SADDAM HUSSEIN? NELLO SCANTINATO DI Giovanni Muciaccia o nel tuo, ${myName}? Non puoi fuggire. Tutturuuuuuuuuuu`
+	}
+}
 };
 
 if (!localStorage.getItem("name")) {
