@@ -15,8 +15,24 @@
 </head>
 
 <body>
+<header>
 <h1>Prima pagina</h1>
+</header>
 <h2>Non ho idea di cosa stia facendo</h2>
+  <nav>
+    <ul style="color:teal;">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Amici</a></li>
+      <li><a href="#">Caos</a></li>
+      <li><a href="#">Prove</a></li>
+    </ul>
+    <form>
+      <input type="search" placeholder="Chi cerca"/>
+      <input type="submit" value="Trova"/>
+    </form>
+  </nav>
+
+<main>
 <p>Varcata la porta, <i>ventisette</i> <em>maschere</em> rivoltanti mi trainavano con lo sguardo <sub>come una vacca malata</sub>  al centro della <b>stanza</b>, mi <strong>denudavano</strong> con i loro cadenti zigomi bonari e mi umiliavano con le pieghe delle loro labbra impietosite, ammansite dal passato eppur ancora <u>eccitate</u> dalla vergogna altrui.<sup>Ispirazione onirica</sup></font></p>
 <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.arte.it%2Ffoto%2F600x450%2F1e%2F132623-1_Piranesi_Imgain_re_fengsler_nr_VII_1761_.jpg&f=1&nofb=1&ipt=74c9a12f906b186ea9d2a70996d6296c06bb57015c62129922837ccd5171a170" alt="A volte è la cecità a rivelare la verità"\>
 <p>Una delle <em>Carceri d'invenzione</em> di Giovanni Battista Piranesi, <a href="https://en.wikipedia.org/wiki/Carceri_d'invenzione">Carceri d'invenzione, Giovanni Battista Piranesi</a> ma se ci clicchi sopra diventa un insolito capriccio, di Gustave Doré, <a href="https://artsandculture.google.com/asset/among-the-fallen-ruins-of-ancient-civilization-gustave-dor%C3%A9/2wH2j-H3KE_USQ">Among the fallen ruins of ancient civilization, Gustave Doré</a>.</p>
@@ -52,7 +68,7 @@ Oltrepassato l'arco della cucina i colori sono più vividi, il corpo più vivace
 <p>Lentamente mi rendo conto che il modo di scrivere gli articoli è strano, palesemente non ottimizzato per la leggibilità da parte di una persona e tantomeno per l'intrattenimento di una persona.
   Sembra che la ridondanza, l'eccesso di ipertestualità e la povertà strutturale abbiano più lo scopo di rendere gli articoli facilmente reperibili e referenziabili da motori di ricerca e fonti esterne, la conoscenza formulata per essere consumata da una macchina prima che da una persona.
   Ma allora perché scrivere gli articoli su un documento? Non avrebbe più senso usare un linguaggio di markup e sfruttare al massimo il potenziale semantico di HTML (per esempio)? Immagino un futuro in cui gli articoli sono pagine internet, come articoli di un blog sul sito della rivista scientifica curati per essere sia leggibili dalle persone e per contenere tutte le meta-informazioni necessarie per una facile indicizzazione.
-  Perché sterilizzare il dominio della scrittura per piegarsi agli algoritmi d'indicizzazione?
+  Perché sterilizzare il dominio della scrittura per piegarsi agli algoritmi d'indicizzazione?<br/>
 
   E soprattutto: perché farmi scrivere una tesi, che è a tutti gli effetti un'opera letteraria, come un articolo da compattare in una rivista come una pecora gnoseologica nell'ovile intensivo del logos? (Dio cammello trucidatore tipografico)
 </p>
@@ -60,9 +76,7 @@ Oltrepassato l'arco della cucina i colori sono più vividi, il corpo più vivace
 <br>
 <br>
 
-<p>Qui riportiamo un attimo come funziona l'elemento blockquote:<code>&lt;blockquote cite=[url stuff]&gt;</code> apre il blockquote con l'attributo della fonte di riferimento che, tuttavia, non è raggiungibile cliccando sul testo seguente. Poi si chiude l'elemento da blockquotare con &lt;/blockquote&gt;. Il paragrafo citato viene indentato.
-
-  Usando <code>&lt;q&gt;</code> si possono fare le citazioni interlinea e vengono indicate con le virgolette.
+<p>Qui riportiamo un attimo come funziona l'elemento blockquote:<code>&lt;blockquote cite=[url stuff]&gt;</code> apre il blockquote con l'attributo della fonte di riferimento che, tuttavia, non è raggiungibile cliccando sul testo seguente. Poi si chiude l'elemento da blockquotare con <code>&lt;/blockquote&gt;</code>. Il paragrafo citato viene indentato. Usando <code>&lt;q&gt;</code> si possono fare le citazioni interlinea e vengono indicate con le virgolette.
 </p>
 
 <p>E ora una cosa chi pampini, <abbr title="Pietro Vittorio Carrara">PVC</abbr>. Fighe ste abbreviazioni.</p>
@@ -76,15 +90,53 @@ Oltrepassato l'arco della cucina i colori sono più vividi, il corpo più vivace
 <input type="text" disabled="disabled"/>
   
 <button>Cambia nome!</button>
+</main>
 
+<aside>
+  <h2>Il cielo a destra!?</h2>
+  <p>Ad oggi le nuvole sono classificate in nove categorie:</p>
+  <dl>
+    <dt>Nuvole basse</dt>
+    <dd>
+    <ul>
+      <li>Cumuli</li>
+      <li>Strati</li>
+      <li>Stratocumuli</li>
+      <li>Cumulonembi</li>
+    </ul>
+    </dd>
+    <dt>Nuvole medie</dt>
+    <dd>
+    <ul>
+      <li>Altocumuli</li>
+      <li>Altostrati</li>
+      <li>Nembostrati</li>
+    </ul>
+    </dd>
+    <dt>Nuvole alte</dt>
+    <dd>
+    <ul>
+      <li>Cirri</li>
+      <li>Cirrocumuli</li>
+      <li>Cirrostrati</li>
+    </ul>
+    </dd>
+  </dl>
+<p>Ma naturalmente la distinzione tra ciascuna di queste categorie è quantomeno... nebulosa.</p>
+</aside>
+
+<footer>
 <address> <p>~Ettore<br/>
               37°58'33.2"N 14°06'25.7"E<br/>
 </p>
-  <ul>
+  <ul style="color:maroon;">
     <li>email: ettored@tuta.io</li>
     <li>insta: redaringhe</li>
     <li>ora esatta: <time datetime="2025-09-11T3:20+01:00"> 11 Settembre 2025, 4:20</time> ma in realtà è mezzanotte del 12. Ieri hanno sparato a Charlie Kirk.</li>
   </ul>
 </address>
+<br>
+©Copyright 2030 by Nemo. All rights reversed.
+</footer>
 </body>
 </html>
