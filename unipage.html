@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rizoma al cacao</title>
+<meta charset="utf-8"/>
+<meta name="author" content="Redaringhe"/>
+<meta name="description" content="Tra le lande interminabili di identità che si fondono in una rete virtuale, qui si trova un piccolo nodo dedicato all'espressione, alla sperimentazione e all'archiviazione."/>
+<link rel="icon" href="test2.png"/>
+<meta name="viewport" content="width=device-width" />
+<link href="pro.css" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ojuju:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"/>
+<script async src="pro.js"></script>
+</head>
+
+<body>
+<header>
+<h1>Il laboratorio di Ettore Dragna</h1>
+</header>
+  <nav>
+    <ul style="color:teal;">
+      <li><a href="#">Home</a></li>
+      <!Amici, in base alla password, rimanda ad una serie di pagine ad accesso ridotto/>
+      <li><a href="#">PCC</a></li>
+    </ul>
+  </nav>
+
+<main>
+  <article>
+<p>23/09/2025</p>
+<p>
+  Given the assignment number one of Gianluca Levi for the course "Programming for Computational Chemistry" (<a href="https://moodle2.units.it/pluginfile.php/783385/mod_resource/content/0/linux_shell.pdf", title="Assignment 1">see here</a>) here I write my short, funky report.
+  <section>
+    <h3>TASK 1 - Extract the number of atoms from an .xyz file without opening it!</h3>
+    <p>
+      What do we know?
+      <ul>
+        <li>First line contains the number of atoms</li>
+        <li>I have a dog and two cats</li>
+        <li>One of these is irrelevant for the task</li>
+      </ul>
+      Then we propose three approaches:
+      <ol>
+        <li>The Peeker</li>
+        <li>The verbose</li>
+        <li>The "I have no idea how this command works but it's fine"</li>
+      </ol>
+    </p>
+    <h4>1. The Peeker</h4>
+    <p>
+      First we use <code>$head filename.xyz</code> to print in the shell the first 10 lines, then we look at the number of atoms and write it on a file calling <code>$grep -w "[number of atoms]" filename.xyz>ass1.txt</code>, where <code>-w</code> serves the purpose of selecting only the lines where the number appears as an entire string and not a substring, while <code>ass1.txt</code> is our target file. Simple but there's little to no automation.
+    </p>
+    <h4>2. The verbose</h4>
+    <p>
+      Here we avoid peeking at the number and propose a more general approach, supposing that we know the line we are looking for is the nth one. We just call <code>$head -[line number] filename.xyz|tail -1>ass1.txt</code> so to get the first [line number] lines of the file and from those we take the last line. We use the pipe operator <code>|</code> to send the output of <code>head</code> as the input of <code>tail</code>. Cool but I imagine that it can become unefficient with big files.
+    </p>
+    <h4>3. The "I have no idea how this command works but it's fine"</h4>
+    <p>
+      Just call <code>$sed -n '[line number]p' filename.xyz>ass1.txt</code>, where <code>-n</code> suppresses the output of the whole content, <code>p</code> prints the [line number] lines.
+    </p>
+  </section>
+  <section>
+    <h3>TASK 2 - Extract the coordinates of every nitrogen atom from molecule1.xyz!</h3>
+    <p>
+      Easier than the former task, just use <code>$grep "N" molecule1.xyz>>ass1.txt</code> so to append the new strings to the file where we already wrote the answer to the previous task.
+    </p>
+  </section>
+  <section>
+    <h3>TASK 3 - Describe the differences between molecule1.xyz and molecule2.xyz using vimdiff</h3>
+    <p>
+      Here we just use vimdiff and list the differences highlighted.
+    </p>
+  </section>
+  To condense all the results in a neat interactive way, I wrote a simple bash executable that you can find in my directory that actually does on the fly the first two tasks.
+</p>
+  </article>
+</main>
+
+<aside>
+  <p>
+    Per ora vuoto ma ci aggiungerò i lavoretti grafici di supporto a quelli regolari e qualche prova personale a usare javascript o altro.
+  </p>
+</aside>
+<hr/>
+<footer>
+<address> <p>~Ettore<br/>
+              37°58'33.2"N 14°06'25.7"E<br/>
+</p>
+  <ul style="color:maroon;">
+    <li>email: ettored@tuta.io</li>
+    <li>insta: redaringhe</li>
+  </ul>
+</address>
+<br/>
+©Copyright 2030 by Nemo. All rights reversed.
+</footer>
+</body>
+</html>
